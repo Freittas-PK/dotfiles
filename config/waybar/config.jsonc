@@ -14,6 +14,7 @@
 
   "modules-right": [
     "tray",
+    "custom/wallpaper",
     "cpu",
     "memory",
     "pulseaudio",
@@ -45,6 +46,13 @@
     "spacing": 6
   },
 
+  "custom/wallpaper": {
+    "format": "",
+    "tooltip": "Trocar wallpaper",
+    "on-click": "wpaperctl next",
+    "on-click-right": "wpaperctl previous"
+  },
+
   "cpu": {
     "format": " {usage}%",
     "tooltip": false
@@ -56,7 +64,8 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", ""],
+    "on-click": "pavucontrol"
   },
 
   "network": {
